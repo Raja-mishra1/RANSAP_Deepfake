@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <title>RANSAP-Detect fake images and videos </title>
+	  <link rel="icon"
+      type="image/png"
+			href="{% static 'images/img.png' %}">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <img src="{% static 'images/img.png' %}" class="navbar-brand" style="max-width:100px">
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+	        	<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+	        	<li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+				<li class="nav-item"><a href="{% url 'login'%}" class="nav-link">Login</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <section class="home-slider js-fullheight owl-carousel bg-white">
+
+
+      <div class="slider-item js-fullheight">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+          	<div class="one-third order-md-last img js-fullheight" style="background-image:url(/static/images/bg_2.jpg);opacity: 0.6" >
+
+				</div>
+	          <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+	          	<div class="text">
+		            <h1 class="mb-4">Detect Fake Images and Videos With RANSAP</h1>
+		            <p>There's an increase in online fraud and spams. So we introduce an  AI based online tool for detecting fake images and videos.</p>
+		            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">View our works</a></p>
+	            </div>
+	          </div>
+        	</div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="ftco-services">
+			<div class="container">
+				<div class="row justify-content-start mb-5 pb-5">
+          <div class="col-md-4 heading-section ftco-animate">
+            <h2 class="mb-4">Our Work Flow</h2>
+          </div>
+          <div class="col-md-8 pl-md-5 ftco-animate">
+          	<div class="pl-md-4 border-line">
+	          	<!--<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in.</p>-->
+          	</div>
+          </div>
+        </div>
+				<div class="row">
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-idea"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">Perfectly Design</h3>
+                <!--<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-compass-symbol"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">Carefully Planned</h3>
+               <!-- <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-layers"></span>
+              </div>
+              <div class="media-body p-2 mt-3">
+                <h3 class="heading">Smartly Execute</h3>
+                <!--<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+              </div>
+            </div>
+          </div>
+        </div>
+	<a name="features"></a>
+        <div class="row justify-content-start mt-5 py-5">
+          <div class="col-md-4 heading-section ftco-animate">
+            <h2 class="mb-4">FEATURES</h2>
+            <p>We can detect forged and deepfake images or videos</p>
+          </div>
+          <div class="col-md-8 ftco-animate">
+          	<div class="row d-flex">
+          		<div class="col-md-6 d-flex align-items-stretch">
+          			<div class="media block-6 services services-2 d-block bg-light p-4 mb-4">
+		              <div class="icon d-flex justify-content-center align-items-center">
+		            		<span class="flaticon-layers"></span>
+		              </div>
+		              <div class="media-body p-2 mt-3">
+		                <h3 class="heading">Image Detector</h3>
+		                <p>Detect forged/deepfake images</p>
+		              </div>
+		            </div>
+          		</div>
+          		<div class="col-md-6 d-flex align-items-stretch">
+          			<div class="media block-6 services services-2 d-block bg-light p-4 mb-4">
+		              <div class="icon d-flex justify-content-center align-items-center">
+		            		<span class="flaticon-layers"></span>
+		              </div>
+		              <div class="media-body p-2 mt-3">
+		                <h3 class="heading">Video Detector</h3>
+		                <p>Detect forged/deepfake videos</p>
+		              </div>
+		            </div>
+          		</div>
+          	</div>
+          </div>
+        </div>
+			</div>
+		</section>
+
+                       <a name="about"></a>
+			<section class="ftco-section ftc-no-pb">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-md-5 p-md-5 img img-2" style="background-image: url( /static/images/about_background.jpg);">
+					</div>
+					<div class="col-md-7 wrap-about pb-md-5 ftco-animate">
+	          <div class="heading-section mb-5 pl-md-5">
+	          	<div class="pl-md-5 ml-md-5">
+		          	<span class="subheading subheading-with-line"><small class="pr-2 bg-white">About</small></span>
+		            <h2 class="mb-4">We can detect fake images &amp; videos</h2>
+	            </div>
+	          </div>
+	          <div class="pl-md-5 ml-md-5 mb-5">
+							<p>Deepfakes (a portmanteau of "deep learning" and "fake") are synthetic media in which a person in an existing image or video is replaced with someone else's likeness. While the act of faking content is not new, deepfakes leverage powerful techniques from machine learning and artificial intelligence to manipulate or generate visual and audio content with a high potential to deceive. The main machine learning methods used to create deepfakes are based on deep learning and involve training generative neural network architectures, such as autoencoders or generative adversarial networks (GANs).
+
+                                Deepfakes have garnered widespread attention for their uses in fake news, hoaxes, and financial fraud. This has elicited responses from both industry and government to detect and limit their use.</p>
+							<p>Images manipulation involves transforming or altering a photograph using various methods and techniques to achieve desired results. Some photo manipulations are considered skillful artwork while others are frowned upon as unethical practices, especially when used to deceive the public. Other examples include being used for political propaganda, or to make a product or person look better, or simply for entertainment purposes or harmless pranks.
+</p>
+							<p><a href="#features" class="btn-custom">Learn More <span class="ion-ios-arrow-forward"></span></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    <footer class="ftco-footer ftco-bg-dark ftco-section" style="padding:5px">
+		<div>
+            <p style="text-align:center">
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+ 	</p>
+      </div>
+    </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js '%}'"></script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+  </body>
+</html>
