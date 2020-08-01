@@ -1,0 +1,93 @@
+<html>
+  {% load static %}
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+        <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+        <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+        <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <img src="{% static 'images/img.png' %}" class="navbar-brand" style="max-width:100px">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact us</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+        <canvas id="myDoughnutChart" width="300" height="300" style="margin-left:30%"></canvas>
+
+        <script>
+        var ctx = document.getElementById('myDoughnutChart');
+        // And for a doughnut chart
+        var myDoughnutChart = new Chart(ctx, {
+
+            type: 'doughnut',
+            data: {
+                labels: ['Real', 'Fake'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [{{ pers }},1-{{ pers }}],
+                    backgroundColor: [
+                    '#e43333d9',
+                        '#127312e0'
+                    ],
+                 borderColor: [
+                        'rgba(128, 0, 0, 1)',
+                        'rgba(0, 128, 0, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+
+            options: {
+                        responsive: false,
+
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+        </script>
+
+
+
+</body>
+
+
+</html>
