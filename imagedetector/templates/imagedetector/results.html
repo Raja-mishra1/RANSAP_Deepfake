@@ -45,9 +45,19 @@
       </div>
     </div>
   </nav>
+    <div class="results-box" style=" max-width: 400px; margin-left: 30%";>
+        <canvas id="myDoughnutChart" width="300" height="300" style=""></canvas>
 
-        <canvas id="myDoughnutChart" width="300" height="300" style="margin-left:30%"></canvas>
+        <div class="results-text" >
+                {% if pers > pers|add:-1 %}
 
+                <h3>Image is Fake</h3>
+                {% else %}
+                <h3>Image is Real</h3>
+                {% endif %}
+        </div>        
+        <img src="{{ image }}">
+    </div>
         <script>
         var ctx = document.getElementById('myDoughnutChart');
         // And for a doughnut chart
@@ -55,17 +65,19 @@
 
             type: 'doughnut',
             data: {
-                labels: ['Real', 'Fake'],
+                labels: ['Fake', 'Real'],
                 datasets: [{
                     label: '# of Votes',
                     data: [{{ pers }},1-{{ pers }}],
                     backgroundColor: [
                     '#e43333d9',
-                        '#127312e0'
+                    '#127312e0',
+                   
                     ],
                  borderColor: [
-                        'rgba(128, 0, 0, 1)',
+                      'rgba(128, 0, 0, 1)',
                         'rgba(0, 128, 0, 1)'
+                        
                     ],
                     borderWidth: 1
                 }]
@@ -74,17 +86,18 @@
             options: {
                         responsive: false,
 
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true
-                                }
-                            }]
-                        }
+
                     }
                 });
-        </script>
+        var c = document.getElementById('showOutput');
+        var ct = c.getContext("2d");
+        ct.font = "30px Arial";
 
+       
+
+
+
+        </script>
 
 
 </body>

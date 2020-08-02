@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
       @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
@@ -44,10 +44,9 @@
 	margin-top: -200px;
 	margin-left: -200px;
 	border-radius: 2px;
-	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
 	overflow: hidden;
-	background: linear-gradient(to top right, darkmagenta 0%, cyan 100%);
-	color: #333;
+	
+	color: black;
 	font-family: "Open Sans", Helvetica, sans-serif;
 }
 
@@ -59,7 +58,6 @@
 	width: 300px;
 	height: 260px;
 	border-radius: 3px;
-	box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.2);
 	background: #fff;
 	display: flex;
 	align-items: center;
@@ -105,25 +103,24 @@ h1 {
 	display: block;
 	width: 140px;
 	height: 40px;
-	background: royalblue;
-	color: mediumvioleterd;
+	background: dodgerblue;
+	color: lavender;
 	border-radius: 3px;
 	border: 0;
-	box-shadow: 0 3px 0 0 cyan;
 	transition: all 0.3s ease-in-out;
 	font-size: 14px;
 }
 
 .btn:hover {
-	background: cyan;
-	box-shadow: 0 3px 0 0 deeppink;
+	background: lightskyblue;
+	box-shadow: 0 3px 0 0 gainsboro;
 }
 
 </style>
     </head>
-    <body>
+    <body style="background-color:white;">
 
-      <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar  ftco-navbar-light" id="ftco-navbar">
         <div class="container">
           <img src="{% static 'images/img.png' %}" class="navbar-brand" style="max-width:100px">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -141,30 +138,32 @@ h1 {
         </div>
       </nav>
 
+      <div class="input-form" style="background-color:  white;box-shadow:2px 4px 13px #211e1ec2;padding: 40px 20px 20px 20px;height: 500px;width: 500px;margin-left: 35%;margin-top:5%;text-align: center;border-radius: 5px;">
+      <form enctype="multipart/form-data" method="POST" action="" style="max-width: 500px;">
+        <div class="form-group">
+          <h1 style="text-align:center; font-size:150%;">Image Forgery Detection</h1>
+               
 
-      <div class="frame">
-        <h1 style="text-align:center; color:white; font-size:150%;">Image Forgery Detection</h1>
-      <div class="center">
-      <div class="title">
-
-    <h1>Image Uploader</h1>
-
-  </div>
+              <h1>Image Uploader</h1>
 
 
-    <form enctype="multipart/form-data" method="POST" action="">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Upload" style="width:200px; margin:0 auto;/>
-    </form>
+         
+              {% csrf_token %}
+              {{ form.as_p }}
+              <input  class="form-control" type="submit" value="Upload" style="width:200px; margin:0 auto"required = false/>
+                 <h4> OR </h4>
+            
 
-	<button type="button" class="btn" name="uploadbutton"></button>
+              <input class="form-control" placeholder ="Add Url" type="url" id="imageupload" name="imageupload">
+              <br>
+              <button  class="form-control" type="submit" class="btn" style="width:200px; margin:0 auto">Predict</button>
+          </div>
+      </form>
+      </div>
+           
 
-	</div>
 
-</div>
 
-<button type="button" class="btn" onclick="" style = "position:relative; left:580px; top:380px;">Predict</button>
 <!-- original pen: https://codepen.io/roydigerhund/pen/ZQdbeN  -->
 
 <!-- NO JS ADDED YET -->
