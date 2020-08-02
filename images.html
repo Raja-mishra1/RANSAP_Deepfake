@@ -2,7 +2,7 @@
 <html lang="en">
   {% load static %}
   <head>
-    <title>Image Uploader</title>
+    <title>Upload Images </title>
 	  <link rel="icon"
       type="image/png"
 			href="{% static 'images/img.png' %}">
@@ -30,26 +30,8 @@
     <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  </head>
-  <body>
 
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <img src="{% static 'images/img.png' %}" class="navbar-brand" style="max-width:100px">
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-	        	<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
-				<li class="nav-item"><a href="{% url 'login'%}" class="nav-link">Login</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
     <style>
       @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 
@@ -62,10 +44,9 @@
 	margin-top: -200px;
 	margin-left: -200px;
 	border-radius: 2px;
-	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
 	overflow: hidden;
-	background: linear-gradient(to top right, darkmagenta 0%, blue 100%);
-	color: #333;
+	background: lightskyblue;
+	color: black;
 	font-family: "Open Sans", Helvetica, sans-serif;
 }
 
@@ -77,7 +58,6 @@
 	width: 300px;
 	height: 260px;
 	border-radius: 3px;
-	box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.2);
 	background: #fff;
 	display: flex;
 	align-items: center;
@@ -123,22 +103,41 @@ h1 {
 	display: block;
 	width: 140px;
 	height: 40px;
-	background: darkmagenta;
-	color: #fff;
+	background: dodgerblue;
+	color: lavender;
 	border-radius: 3px;
 	border: 0;
-	box-shadow: 0 3px 0 0 hotpink;
 	transition: all 0.3s ease-in-out;
 	font-size: 14px;
 }
 
 .btn:hover {
-	background: rebeccapurple;
-	box-shadow: 0 3px 0 0 deeppink;
+	background: lightskyblue;
+	box-shadow: 0 3px 0 0 gainsboro;
 }
 
 </style>
-    
+    </head>
+    <body style="background-color:white;">
+
+      <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+          <img src="{% static 'images/img.png' %}" class="navbar-brand" style="max-width:100px">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+          </button>
+
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="{% url 'login'%}" class="nav-link">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
 
       <div class="frame">
         <h1 style="text-align:center; color:white; font-size:150%;">Image Forgery Detection</h1>
@@ -154,12 +153,19 @@ h1 {
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Upload" style="width:200px; margin:0 auto;/>
+    <button type="button" class="btn" name="uploadbutton"></button>
     </form>
+<h4> OR </h4>
+    <form action="">
 
-	<button type="button" class="btn" name="uploadbutton"></button>
-
+    <input placeholder ="Add Url" type="url" id="imageupload" name="imageupload">
+    <br>
+    <button type="button" class="btn" onclick="" style="height:20px; width:100px;margin-left:30%;">Predict</button>
+  </form>
 	</div>
 </div>
+
+
 <!-- original pen: https://codepen.io/roydigerhund/pen/ZQdbeN  -->
 
 <!-- NO JS ADDED YET -->
