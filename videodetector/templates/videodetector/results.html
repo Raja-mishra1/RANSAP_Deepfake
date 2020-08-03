@@ -27,7 +27,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="border-bottom: 1px;border-color: black;">
     <div class="container">
       <img src="{% static 'images/img.png' %}" class="navbar-brand" style="max-width:100px">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,19 +45,17 @@
       </div>
     </div>
   </nav>
-    <div class="results-box" style=" max-width: 400px; margin-left: 30%";>
+    <div class="results-box" style=" max-width: 400px; margin-left: 30%;border:2px";>
         <canvas id="myDoughnutChart" width="300" height="300" style=""></canvas>
 
         <div class="results-text" >
-                {% if pers > pers|add:-1 %}
+                {% if pers > pers|add:-1 %}                                                                                                                                                                                                                                                                                                                                   
 
-                <h3>Image is Fake</h3>
+                <h3>Video is Fake</h3>
                 {% else %}
-                <h3>Image is Real</h3>
+                <h3>Video is Real</h3>
                 {% endif %}
         </div>        
-        <img src="{% static '/images/123.jpeg' %}">
-        <img src="{% static '/images/highlighted2.png' %}">
     </div>
         <script>
         var ctx = document.getElementById('myDoughnutChart');

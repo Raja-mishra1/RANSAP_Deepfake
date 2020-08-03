@@ -55,5 +55,3 @@ def predict_img(image_):
         return True,classes[0][0]
     else:
         return False, classes[0][1]
-
-

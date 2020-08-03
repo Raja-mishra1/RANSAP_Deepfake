@@ -138,7 +138,11 @@
 		            		<span class="flaticon-layers"></span>
 		              </div>
 		              <div class="media-body p-2 mt-3">
-		                <h3 class="heading">Image Detector</h3>
+                          {% if user.is_authenticated %}
+                          <a href="{% url 'image_detection' %}"><h3 class="heading">Image Detector</h3></a>
+                          {% else %}
+                          <a href="{% url 'login' %}"><h3 class="heading">Image Detector</h3></a>
+                          {% endif %}
 		                <p>Detect forged/deepfake images</p>
 		              </div>
 		            </div>
@@ -149,7 +153,11 @@
 		            		<span class="flaticon-layers"></span>
 		              </div>
 		              <div class="media-body p-2 mt-3">
-		                <h3 class="heading">Video Detector</h3>
+                          {% if user.is_authenticated %}
+                          <a href="{% url 'video_detection' %}"> <h3 class="heading">Video Detector</h3>
+                          {% else %}
+                          <a href="{% url 'login' %}"> <h3 class="heading">Video Detector</h3></a>
+                          {% endif %}
 		                <p>Detect forged/deepfake videos</p>
 		              </div>
 		            </div>

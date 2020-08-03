@@ -1,9 +1,10 @@
 import os
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Video
 from .forms import VideoForm
 from django.contrib.auth.decorators import login_required
 from .predict_forgery import *
+from django.core.files import File
 
 
 @login_required(login_url="/accounts/login/")
@@ -18,6 +19,10 @@ def video_detection(request):
         form.save()
 
     context = {"videofile": videofile, "form": form}
+    if request.method == "POST":
+        url = request.POST.get("imageupload")
+        print(len(url))
+        return redirect("/video/results")
 
     return render(request, "videodetector/videos.html", context)
 
@@ -25,8 +30,13 @@ def video_detection(request):
 
 def predict_video(request):
     arr = os.listdir("media/videos")
-    video = arr[-1]
-    #op = predict(video)
-    op = 1
-    output = {"data":op}
+    video = list(Video.objects.all())
+    lastvideo = Video.objects.last()
+    print(lastvideo.videofile.url)
+    print(request.method)
+    video = lastvideo.videofile.url
+
+    op = predict(video)
+
+    output = {"pers":op}
     return render(request,"videodetector/results.html",output)
